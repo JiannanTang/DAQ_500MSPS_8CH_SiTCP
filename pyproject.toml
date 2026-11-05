@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "daq-500msps-8ch-sitcp"
+version = "0.14.0"
+description = "DAQ_500MSPS_8CH_SiTCP desktop acquisition application"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "PySide6>=6.7"]
+
+[project.scripts]
+sitcp-host = "sitcp_host.gui.app:main"
+daq500m = "sitcp_host.gui.app:main"
+sitcp-probe = "sitcp_host.cli:main"
+sitcp-fake-device = "sitcp_host.testing.fake_rbcp:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

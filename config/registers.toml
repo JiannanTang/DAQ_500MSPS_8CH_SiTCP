@@ -1,0 +1,378 @@
+[device]
+host = "192.168.10.16"
+rbcp_port = 4660
+tcp_port = 24
+timeout_s = 0.8
+retries = 2
+
+[spaces.config]
+start = 0x00000000
+end = 0x0000007F
+writable = true
+
+[spaces.status]
+start = 0x00000100
+end = 0x0000017F
+writable = false
+
+[registers.threshold_ch0]
+address = 0x0000
+width = 2
+access = "rw"
+bit_width = 16
+group = "trigger threshold"
+description = "ADC channel 0 trigger threshold, little-endian uint16"
+
+[registers.threshold_ch1]
+address = 0x0002
+width = 2
+access = "rw"
+bit_width = 16
+group = "trigger threshold"
+description = "ADC channel 1 trigger threshold, little-endian uint16"
+
+[registers.threshold_ch2]
+address = 0x0004
+width = 2
+access = "rw"
+bit_width = 16
+group = "trigger threshold"
+description = "ADC channel 2 trigger threshold, little-endian uint16"
+
+[registers.threshold_ch3]
+address = 0x0006
+width = 2
+access = "rw"
+bit_width = 16
+group = "trigger threshold"
+description = "ADC channel 3 trigger threshold, little-endian uint16"
+
+[registers.threshold_ch4]
+address = 0x0008
+width = 2
+access = "rw"
+bit_width = 16
+group = "trigger threshold"
+description = "ADC channel 4 trigger threshold, little-endian uint16"
+
+[registers.threshold_ch5]
+address = 0x000A
+width = 2
+access = "rw"
+bit_width = 16
+group = "trigger threshold"
+description = "ADC channel 5 trigger threshold, little-endian uint16"
+
+[registers.threshold_ch6]
+address = 0x000C
+width = 2
+access = "rw"
+bit_width = 16
+group = "trigger threshold"
+description = "ADC channel 6 trigger threshold, little-endian uint16"
+
+[registers.threshold_ch7]
+address = 0x000E
+width = 2
+access = "rw"
+bit_width = 16
+group = "trigger threshold"
+description = "ADC channel 7 trigger threshold, little-endian uint16"
+
+[registers.trigger_length_ch0]
+address = 0x0010
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger length"
+description = "ADC channel 0 trigger data length"
+
+[registers.trigger_length_ch1]
+address = 0x0011
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger length"
+description = "ADC channel 1 trigger data length"
+
+[registers.trigger_length_ch2]
+address = 0x0012
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger length"
+description = "ADC channel 2 trigger data length"
+
+[registers.trigger_length_ch3]
+address = 0x0013
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger length"
+description = "ADC channel 3 trigger data length"
+
+[registers.trigger_length_ch4]
+address = 0x0014
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger length"
+description = "ADC channel 4 trigger data length"
+
+[registers.trigger_length_ch5]
+address = 0x0015
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger length"
+description = "ADC channel 5 trigger data length"
+
+[registers.trigger_length_ch6]
+address = 0x0016
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger length"
+description = "ADC channel 6 trigger data length"
+
+[registers.trigger_length_ch7]
+address = 0x0017
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger length"
+description = "ADC channel 7 trigger data length"
+
+[registers.trigger_offset_ch0]
+address = 0x0018
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger offset"
+description = "ADC channel 0 trigger data offset"
+
+[registers.trigger_offset_ch1]
+address = 0x0019
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger offset"
+description = "ADC channel 1 trigger data offset"
+
+[registers.trigger_offset_ch2]
+address = 0x001A
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger offset"
+description = "ADC channel 2 trigger data offset"
+
+[registers.trigger_offset_ch3]
+address = 0x001B
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger offset"
+description = "ADC channel 3 trigger data offset"
+
+[registers.trigger_offset_ch4]
+address = 0x001C
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger offset"
+description = "ADC channel 4 trigger data offset"
+
+[registers.trigger_offset_ch5]
+address = 0x001D
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger offset"
+description = "ADC channel 5 trigger data offset"
+
+[registers.trigger_offset_ch6]
+address = 0x001E
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger offset"
+description = "ADC channel 6 trigger data offset"
+
+[registers.trigger_offset_ch7]
+address = 0x001F
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger offset"
+description = "ADC channel 7 trigger data offset"
+
+[registers.trigger_channel]
+address = 0x0020
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger control"
+description = "Selected trigger channel"
+
+[registers.external_trigger_delay]
+address = 0x0021
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger control"
+unit = "8 ns"
+description = "Delay after an external trigger"
+
+[registers.trigger_mode]
+address = 0x0022
+width = 1
+access = "rw"
+bit_width = 3
+group = "trigger control"
+description = "000 independent, 001 broadcast, 010 coincidence, 011 external"
+
+[registers.system_reset]
+address = 0x0023
+width = 1
+access = "rw"
+bit_width = 1
+group = "clock and ADC control"
+momentary = true
+description = "Active-high system reset; pulse 1 then 0"
+
+[registers.ad9528_reset]
+address = 0x0024
+width = 1
+access = "rw"
+bit_width = 1
+group = "clock and ADC control"
+momentary = true
+description = "AD9528 reset, active high; pulse 1 then 0"
+
+[registers.ad9528_configure]
+address = 0x0025
+width = 1
+access = "rw"
+bit_width = 1
+group = "clock and ADC control"
+momentary = true
+description = "Start AD9528 configuration; pulse 1 then 0"
+
+[registers.ad9694_configure]
+address = 0x0026
+width = 1
+access = "rw"
+bit_width = 1
+group = "clock and ADC control"
+momentary = true
+description = "Start AD9694 configuration; pulse 1 then 0"
+
+[registers.ad9694_powerdown]
+address = 0x0027
+width = 1
+access = "rw"
+bit_width = 2
+group = "clock and ADC control"
+description = "AD9694 power-down bits; 0 is normal operation"
+
+[registers.jesd204b_configure]
+address = 0x0028
+width = 1
+access = "rw"
+bit_width = 1
+group = "JESD204B"
+momentary = true
+description = "Start JESD204B synchronization; pulse 1 then 0"
+
+[registers.jesd_status_read]
+address = 0x0029
+width = 1
+access = "rw"
+bit_width = 1
+group = "JESD204B"
+momentary = true
+description = "JESD status read control; pulse 1 then 0"
+
+[registers.software_trigger]
+address = 0x002A
+width = 1
+access = "rw"
+bit_width = 1
+group = "trigger control"
+momentary = true
+description = "Software trigger; pulse 1 then 0"
+
+[registers.channel_trigger_edge]
+address = 0x002B
+width = 1
+access = "rw"
+bit_width = 8
+group = "trigger control"
+description = "Per-channel edge selection; 1 is rising edge"
+
+[registers.trigger_spread_cycles]
+address = 0x002C
+width = 1
+access = "rw"
+bit_width = 4
+group = "trigger control"
+unit = "8 ns"
+description = "Coincidence-window pulse widening"
+
+[registers.coincidence_channel_a]
+address = 0x002D
+width = 1
+access = "rw"
+bit_width = 3
+group = "trigger control"
+description = "First coincidence channel"
+
+[registers.coincidence_channel_b]
+address = 0x002E
+width = 1
+access = "rw"
+bit_width = 3
+group = "trigger control"
+description = "Second coincidence channel"
+
+[registers.trigger_buffer_clear]
+address = 0x0030
+width = 1
+access = "rw"
+bit_width = 1
+group = "trigger control"
+momentary = true
+description = "Clear trigger-module buffers; active high, pulse 1 then 0"
+
+[registers.time_64b]
+address = 0x0100
+width = 8
+access = "r"
+bit_width = 64
+group = "status"
+description = "64-bit device time, little-endian"
+
+[registers.temperature]
+address = 0x0108
+width = 2
+access = "r"
+bit_width = 16
+group = "status"
+description = "Raw 16-bit temperature value, little-endian"
+
+[registers.jesd_sync_state]
+address = 0x010A
+width = 1
+access = "r"
+bit_width = 8
+group = "status"
+description = "Raw JESD204B synchronization state"
+
+[registers.jesd_reset_state]
+address = 0x010B
+width = 1
+access = "r"
+bit_width = 8
+group = "status"
+description = "Raw JESD204B reset state"
